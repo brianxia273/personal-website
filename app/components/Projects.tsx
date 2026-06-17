@@ -5,7 +5,7 @@ interface Project {
   title: string;
   descrip: string;
   skills: string[];
-  gLink: Link; // github link
+  gLink?: Link; // github link
   wLink?: Link; // website link
   time: string;
   image: string;
@@ -40,10 +40,10 @@ const projects: Project[] = [
       "An accessible electric wheelchair with an eye-tracking interface, enabling control for users with limited mobility, built with Cornell Assistive Technologies team.",
     skills: ["Python"],
 
-    gLink: {
-      name: "Repo",
-      url: "https://github.com/cornellassist/Wheelchair-Project",
-    },
+    // gLink: {
+    //   name: "Repo",
+    //   url: "https://github.com/cornellassist/Wheelchair-Project",
+    // },
     time: "",
     image: "/chair.webp",
   },
@@ -63,12 +63,14 @@ function ProjectCard({ project }: { project: Project }) {
         <h2 className="font-semibold text-xl">{project.title}</h2>
         <p className="h-20 mt-6">{project.descrip}</p>
         <p>
-          <a
-            href={project.gLink.url}
-            className="underline hover:text-[#B31B1B] transition-colors"
-          >
-            {project.gLink.name}
-          </a>
+          {project.gLink && (
+            <a
+              href={project.gLink.url}
+              className="underline hover:text-[#B31B1B] transition-colors"
+            >
+              {project.gLink.name}
+            </a>
+          )}
           {project.wLink && (
             <a href={project.wLink.url}>
               ,{" "}
