@@ -1,4 +1,4 @@
-import { type Link } from "./types";
+import { type Link } from "../types";
 
 interface Role {
   img: string;
@@ -62,11 +62,13 @@ const roles: Role[] = [
 function RoleCard({ role }: { role: Role }) {
   return (
     <div
-      className="flex gap-6 h-90 text-xl text-charcoal leading-relaxed rounded-[20px]
+      className="flex flex-col sm:flex-row gap-6 text-xl text-charcoal leading-relaxed rounded-[20px]
     hover:shadow-[0_1px_2px_rgba(0,0,0,0.06),0_12px_24px_rgba(0,0,0,0.08)] py-10 px-5 transition ease-in-out"
     >
-      <p className="w-50 text-charcoal/60">{role.time}</p>
-      <div className="flex flex-col w-100 justify-between">
+      <p className="w-full sm:w-50 text-charcoal/60 order-2 sm:order-1">
+        {role.time}
+      </p>
+      <div className="flex flex-col w-full sm:w-100 gap-4 order-1 sm:order-2">
         <div className="flex flex-col">
           <div className="flex items-center gap-3">
             <img
@@ -96,7 +98,7 @@ function RoleCard({ role }: { role: Role }) {
           {role.skills.map((s, index) => {
             return (
               <div
-                className="border bg-[#B31B1B]/15 rounded-[1000px] px-4 font-light"
+                className="border rounded-2xl w-fit px-2 text-base"
                 key={index}
               >
                 {s}
@@ -111,10 +113,10 @@ function RoleCard({ role }: { role: Role }) {
 
 export function Roles() {
   return (
-    <div className="w-full border-b-2 h-280 px-5 sm:px-20 md:px-20 lg:px-18 flex justify-center pt-20">
-      <div className="flex flex-col h-120 w-full gap-15">
+    <div className="w-full border-b px-5 sm:px-20 md:px-20 lg:px-18 flex justify-center pt-20 pb-20">
+      <div className="flex flex-col w-full gap-10">
         <h1 className="text-6xl font-medium">Roles</h1>
-        <div className="grid grid-cols-2 gap-x-10 gap-y-15">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-15">
           {roles.map((r, index) => {
             return <RoleCard role={r} key={index} />;
           })}

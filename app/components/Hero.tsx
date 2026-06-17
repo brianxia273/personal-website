@@ -5,7 +5,7 @@ function HeroLeftText() {
     <div className="flex flex-col gap-6 ">
       <div className="flex flex-col gap-4">
         <h1 className="text-6xl font-medium">Brian Xia</h1>
-        <div className="flex text-xl justify-center gap-3">
+        <div className="flex text-xl justify-center gap-3 w-fit">
           <h2>Fullstack Dev</h2>
           <div className="">|</div>
           <h2>
@@ -41,8 +41,8 @@ function HeroLeftText() {
 
 function HeroRightText() {
   return (
-    <div className="flex flex-col gap-10 text-xl text-charcoal leading-relaxed w-1/2">
-      <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-10 text-xl text-charcoal leading-relaxed lg:w-1/2">
+      <div className="flex gap-5 flex-col">
         <p>
           I'm a full-stack developer building web and mobile applications across
           healthcare, finance, research, and nonprofit domains.
@@ -72,8 +72,8 @@ export function Hero() {
   return (
     <div>
       {/* container */}
-      <div className="w-full h-160 border-b-2 flex items-center justify-center px-5 sm:px-20 md:px-20 lg:px-18">
-        <div className="flex items-center justify-between h-100 w-full bg-amber-0">
+      <div className="w-full border-b flex lg:items-center justify-center px-5 sm:px-20 md:px-20 lg:px-18 pt-20 pb-16 lg:py-40">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between w-full gap-10 lg:gap-0">
           <HeroLeftText />
           <HeroRightText />
         </div>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { type Link } from "./types";
+import { type Link } from "../types";
 
 interface Project {
   title: string;
@@ -62,24 +62,28 @@ function ProjectCard({ project }: { project: Project }) {
       <div className="flex flex-col pl-2">
         <h2 className="font-semibold text-xl">{project.title}</h2>
         <p className="h-20 mt-6">{project.descrip}</p>
-        <p>Built with {project.skills.join(", ")}.</p>
-        <div className="flex gap-2 mt-4">
+        <p>
           <a
             href={project.gLink.url}
-            target="_blank"
-            className="border rounded-2xl w-fit px-2"
+            className="underline hover:text-[#B31B1B] transition-colors"
           >
             {project.gLink.name}
           </a>
           {project.wLink && (
-            <a
-              href={project.wLink.url}
-              target="_blank"
-              className="border rounded-2xl w-fit px-2"
-            >
-              {project.wLink.name}
+            <a href={project.wLink.url}>
+              ,{" "}
+              <span className="underline hover:text-[#B31B1B] transition-colors">
+                {project.wLink.name}
+              </span>
             </a>
           )}
+        </p>
+        <div className="flex gap-2 mt-4">
+          {project.skills.map((s, index) => (
+            <div key={index} className="border rounded-2xl w-fit px-2">
+              {s}
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -88,10 +92,10 @@ function ProjectCard({ project }: { project: Project }) {
 
 export function Projects() {
   return (
-    <div className="border-b-2 h-300 flex justify-center px-5 sm:px-20 md:px-20 lg:px-18 pt-20">
+    <div className="flex justify-center px-5 sm:px-20 md:px-20 lg:px-18 pt-20 pb-20">
       <div className="flex flex-col w-full gap-15">
         <h1 className="text-6xl font-medium">Projects</h1>
-        <div className="grid grid-cols-2 items-center gap-x-10 gap-y-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-x-10 gap-y-10">
           {projects.map((p: Project, index) => (
             <ProjectCard project={p} key={index} />
           ))}
