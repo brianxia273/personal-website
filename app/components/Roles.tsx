@@ -116,7 +116,7 @@ export function Roles() {
     <div className="w-full border-b px-5 sm:px-20 md:px-20 lg:px-18 flex justify-center pt-20 pb-20">
       <div className="flex flex-col w-full gap-10">
         <h1 className="text-6xl font-medium">Roles</h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-15">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-10 lg:gap-y-15">
           {roles.map((r, index) => {
             return <RoleCard role={r} key={index} />;
           })}
