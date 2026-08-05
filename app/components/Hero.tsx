@@ -39,14 +39,14 @@ function HeroRightText() {
           data structures and algorithms course.
         </p>
       </div>
-      <button
+      {/* <button
         className="w-50 hover:text-[#B31B1B] border py-1 rounded-[1000px] cursor-pointer transition-colors"
         onClick={() => {
           window.open("/Brian_Xia_Resume.pdf", "_blank");
         }}
       >
         See my resume
-      </button>
+      </button> */}
       <div className="flex gap-6 items-center ml-0.5">
         <a href="https://www.linkedin.com/in/brian-xia/" aria-label="LinkedIn">
           <svg
