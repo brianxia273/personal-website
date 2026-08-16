@@ -35,8 +35,8 @@ function HeroRightText() {
           to build practical tools for people to use.
         </p>
         <p>
-          I'm currently interning at Prudential Financial and TAing Cornell's
-          data structures and algorithms course.
+          I'm currently TAing Cornell's data structures and algorithms course,
+          and I just finished up an internship at Prudential Financial.
         </p>
       </div>
       {/* <button

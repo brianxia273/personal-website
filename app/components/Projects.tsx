@@ -13,6 +13,14 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Mender (Prudential Financial project)",
+    descrip:
+      "Proposed and built a full-stack tool using mutation testing across internal repos to surface unit tests with inflated coverage but weak fault detection, integrating Claude (Bedrock) to generate targeted test cases to cover gaps",
+    skills: ["React", "Express", "Bedrock"],
+    time: "",
+    image: "/Generic_Pru_News.avif",
+  },
+  {
     title: "Cornell Assistive Tech Website + CMS",
     descrip:
       "A rebuild of the organization's Wix site into a custom full-stack app with a CMS for non-developer editing, leading a team of developers and designers.",
