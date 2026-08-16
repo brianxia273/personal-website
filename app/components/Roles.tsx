@@ -15,9 +15,9 @@ const roles: Role[] = [
     img: "/Circle_Pru_Rrock.avif",
     company: "Prudential Financial",
     role: "Global Technology & Operations Intern",
-    time: "Jun 2026 - Present",
+    time: "Jun - Aug 2026",
     descrip:
-      "Building client-facing full-stack tools for the Retirement Strategies business segment.",
+      "Built full-stack tools for distribution operations and financial advisors, and spearheaded a mutation testing tool with Claude (Bedrock) integration.",
     skills: ["React", "Node.js"],
   },
   {
